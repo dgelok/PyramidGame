@@ -1,3 +1,11 @@
+''' 
+
+To-do list:
+-- make look nicer
+-- add some more deaths
+'''
+
+
 from sys import exit
 from random import randint
 from textwrap import dedent
@@ -31,8 +39,8 @@ class Death(Room):
     quips = [
         "Too bad, you could have done so much with your life.",
         "Your mom shakes her head and lets out a sign of exasperation.",
-        "lol"
-        "I'm so proud of you."
+        "lol",
+        "I'm so proud of you.",
         "HUEHUEHUEHUE",
         "You should try again, just... less terrible.",
         "Way to go!",
@@ -59,7 +67,7 @@ class Entrance(Room):
     def enter(self):
         print(dedent("""
         \n\n\n\n\n\n\n\n\n
-        You are famous archeologist Illinois Smith. 
+        You are the famous archeologist Illinois Smith. 
         You have just discovered where the door to the pyramid is, and you have the key...
         but you do not know where the keyhole is. Is it:
 
