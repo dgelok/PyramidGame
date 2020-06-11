@@ -1,25 +1,10 @@
-''' 
-
-To-do list:
--- make look nicer
--- add some more deaths
-'''
-
 
 from sys import exit
 from random import randint
 from textwrap import dedent
 
-
-class Room(object):
-
-    def enter(self):
-        print("This room is not yet formatted.")
-        print("Implement your enter() for this room.")
-        exit(1)
-
+# Engine
 class Engine(object):
-
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
@@ -32,7 +17,13 @@ class Engine(object):
             current_scene = self.scene_map.goNext(next_scene_name)
 
         current_scene.enter()
-        
+
+#All Rooms
+class Room(object):
+    def enter(self):
+        print("This room is not yet formatted.")
+        print("Implement your enter() for this room.")
+        exit(1)
 
 class Death(Room):
 
@@ -300,7 +291,7 @@ class Finished(Room):
         print("You win! Great job!")
         exit(1)
 
-
+# map (run by engine)
 class Map(object):
 
     rooms = {
